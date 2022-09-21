@@ -28,11 +28,12 @@ namespace InClub.Infraestructure
             int id = 0;
             int Codigo = 0;
             var query = "usp_Compra_Insert";
-
+            int reg = 0;
 
             var param = new DynamicParameters();
             param.Add("@Boleta", item.Boleta, DbType.String);
             param.Add("@Numero", item.Numero, DbType.Int32);
+            param.Add("@Total", item.Total, DbType.Decimal);
             param.Add("@UsrReg", item.UsrReg, DbType.Int32);
 
             param.Add("@IdSalida", 0, DbType.Int32, direction: ParameterDirection.Output);
@@ -40,9 +41,42 @@ namespace InClub.Infraestructure
 
             Codigo = param.Get<int>("@IdSalida");
 
+            var DC = item.DetalleCompra;
+            if (item.DetalleCompra != null)
+            {
+                foreach (var var in DC.ToList())
+                {
+
+                    DetalleCompraEntity obj = new DetalleCompraEntity();
+
+                    obj = var;
+                    obj.IdCompra = Codigo;
+                    reg = InsertDetalle(obj);
+                }
+            }
+
             return Codigo;
         }
 
+        public int InsertDetalle(DetalleCompraEntity item)
+        {
+            int id = 0;
+            int Codigo = 0;
+            var query = "usp_DetalleCompra_Insert";
+
+            var param = new DynamicParameters();
+
+            param.Add("@IdCompra", item.IdCompra, DbType.Int32);
+            param.Add("@IdProducto", item.IdProducto, DbType.Int32);
+            
+            param.Add("@UsrReg", item.UsrReg, DbType.Int32);
+            param.Add("@IdSalida", 0, DbType.Int32, direction: ParameterDirection.Output);
+            id = SqlMapper.Execute(this._connectionFactory.GetConnection, query, param, commandType: CommandType.StoredProcedure);
+
+            Codigo = param.Get<int>("@IdSalida");
+
+            return Codigo;
+        }
         public async Task<bool> DeleteCompra(int ID)
         {
             bool exito = false;
@@ -81,6 +115,7 @@ namespace InClub.Infraestructure
             param.Add("@IdCompra", item.IdCompra, DbType.Int32);
             param.Add("@Boleta", item.Boleta, DbType.String);
             param.Add("@Numero", item.Numero, DbType.Int32);
+            param.Add("@Total", item.Total, DbType.Decimal);
 
             param.Add("@UsrMod", item.UsrMod, DbType.Int32);
 
@@ -118,36 +153,107 @@ namespace InClub.Infraestructure
         private IEnumerable<CompraEntity> GetById(int Id)
         {
             IEnumerable<CompraEntity> lstFound = new List<CompraEntity>();
+            IEnumerable<CompraEntity> lstFound2 = new List<CompraEntity>();
             var query = "usp_Compra_Get";
             var param = new DynamicParameters();
 
             param.Add("@IdCompra", Id, DbType.Int32);
 
             lstFound = SqlMapper.Query<CompraEntity>(this._connectionFactory.GetConnection, query, param, commandType: CommandType.StoredProcedure);
-            return lstFound;
+            foreach (var item in lstFound.ToList())
+            {
+                lstFound2 = lstFound2.Append(new CompraEntity
+                {
+                    IdCompra=item.IdCompra,
+                    Boleta = item.Boleta,
+                    Numero=item.Numero,  
+                    Total=item.Total,
+                    DateReg = item.DateReg,
+                    UsrReg = item.UsrReg,
+                    DateMod = item.DateMod,
+                    UsrMod = item.UsrMod,
+                    Estado = item.Estado,
+                    DetalleCompra = this.GetByCompra(item.IdCompra)
+
+                });
+
+            }
+            return lstFound2;
         }
 
         private IEnumerable<CompraEntity> GetByUsuario(int Id)
         {
             IEnumerable<CompraEntity> lstFound = new List<CompraEntity>();
-            var query = "usp_Compra_Get";
+            IEnumerable<CompraEntity> lstFound2 = new List<CompraEntity>();
+            var query = "usp_Compra_Get_ByUsuario";
             var param = new DynamicParameters();
 
             param.Add("@IdUsuario", Id, DbType.Int32);
 
             lstFound = SqlMapper.Query<CompraEntity>(this._connectionFactory.GetConnection, query, param, commandType: CommandType.StoredProcedure);
+            foreach (var item in lstFound.ToList())
+            {
+                lstFound2 = lstFound2.Append(new CompraEntity
+                {
+                    IdCompra = item.IdCompra,
+                    Boleta = item.Boleta,
+                    Numero = item.Numero,
+                    Total = item.Total,
+                    DateReg = item.DateReg,
+                    UsrReg = item.UsrReg,
+                    DateMod = item.DateMod,
+                    UsrMod = item.UsrMod,
+                    Estado = item.Estado,
+                    DetalleCompra = this.GetByCompra(item.IdCompra)
+
+                });
+
+            }
+            return lstFound2;
+        }
+
+        private IEnumerable<DetalleCompraEntity> GetByCompra(int Id)
+        {
+            IEnumerable<DetalleCompraEntity> lstFound = new List<DetalleCompraEntity>();
+            var query = "usp_DetalleCompra_Get";
+            var param = new DynamicParameters();
+
+            param.Add("@IdCompra", Id, DbType.Int32);
+
+            lstFound = SqlMapper.Query<DetalleCompraEntity>(this._connectionFactory.GetConnection, query, param, commandType: CommandType.StoredProcedure);
+
+
             return lstFound;
         }
         private IEnumerable<CompraEntity> GetByPagination()
         {
             IEnumerable<CompraEntity> lstFound = new List<CompraEntity>();
+            IEnumerable<CompraEntity> lstFound2 = new List<CompraEntity>();
             var query = "usp_Compra_Get";
             var param = new DynamicParameters();
 
             param.Add("@IdCompra", 0, DbType.Int32);
 
             lstFound = SqlMapper.Query<CompraEntity>(this._connectionFactory.GetConnection, query, param, commandType: CommandType.StoredProcedure);
-            return lstFound;
+            foreach (var item in lstFound.ToList())
+            {
+                lstFound2 = lstFound2.Append(new CompraEntity
+                {
+                    IdCompra = item.IdCompra,
+                    Boleta = item.Boleta,
+                    Numero = item.Numero,
+                    Total = item.Total,
+                    DateReg = item.DateReg,
+                    UsrReg = item.UsrReg,
+                    DateMod = item.DateMod,
+                    UsrMod = item.UsrMod,
+                    Estado = item.Estado,
+                    DetalleCompra = this.GetByCompra(item.IdCompra)
+
+                });
+
+            }
+            return lstFound2;
         }
 
 

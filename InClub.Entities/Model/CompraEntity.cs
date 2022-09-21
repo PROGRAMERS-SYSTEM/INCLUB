@@ -21,6 +21,9 @@ namespace InClub.Entities
         public int Estado { get; set; }
 
         [DataMember(EmitDefaultValue = true, IsRequired = true)]
+        public decimal Total { get; set; }
+
+        [DataMember(EmitDefaultValue = true, IsRequired = true)]
         public IEnumerable<DetalleCompraEntity> DetalleCompra { get; set; }
     }
 }

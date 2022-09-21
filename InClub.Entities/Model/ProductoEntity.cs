@@ -15,6 +15,10 @@ namespace InClub.Entities
         [DataMember(EmitDefaultValue = true, IsRequired = true)]
         public string Descripcion { get; set; }
 
+
+        [DataMember(EmitDefaultValue = true, IsRequired = true)]
+        public decimal Precio { get; set; }
+
         [DataMember(EmitDefaultValue = true, IsRequired = true)]
         public int Estado { get; set; }
     }

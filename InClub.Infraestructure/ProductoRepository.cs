@@ -32,7 +32,8 @@ namespace InClub.Infraestructure
 
 
             var param = new DynamicParameters();
-            param.Add("@Descripcion", item.Descripcion, DbType.String);            
+            param.Add("@Descripcion", item.Descripcion, DbType.String);
+            param.Add("@Precio", item.Precio, DbType.Decimal);
             param.Add("@UsrReg", item.UsrReg, DbType.Int32);
 
             param.Add("@IdSalida", 0, DbType.Int32, direction: ParameterDirection.Output);
@@ -79,8 +80,10 @@ namespace InClub.Infraestructure
             var param = new DynamicParameters();
 
             param.Add("@IdProducto", item.IdProducto, DbType.Int32);
+
             param.Add("@Descripcion", item.Descripcion, DbType.String);
-            
+            param.Add("@Precio", item.Precio, DbType.Decimal);
+
             param.Add("@UsrMod", item.UsrMod, DbType.Int32);
 
             param.Add("@IdSalida", 0, DbType.Int32, direction: ParameterDirection.Output);
