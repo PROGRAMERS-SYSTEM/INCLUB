@@ -27,6 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InClub.Service", "InClub.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InClub.Api", "InClub.Api\InClub.Api.csproj", "{29B7B22C-BBD8-4868-AA3D-6D74A99799DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Srcipt SQL", "05. Srcipt SQL", "{398DFA91-1FDC-4C26-8575-F78B12ACB2A5}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Script_BASE_DE_DATOS.sql = ..\..\..\Desktop\Script_BASE_DE_DATOS.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
