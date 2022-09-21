@@ -1,0 +1,17 @@
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Infraestructure.deps.json
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Infraestructure.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Infraestructure.pdb
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Entities.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Repository.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Util.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Entities.pdb
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Repository.pdb
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\bin\Debug\netcoreapp3.1\InClub.Util.pdb
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.csproj.CopyComplete
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Infraestructure\obj\Debug\netcoreapp3.1\InClub.Infraestructure.pdb

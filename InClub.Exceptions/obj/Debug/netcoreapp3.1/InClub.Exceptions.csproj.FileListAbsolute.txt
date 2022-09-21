@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\bin\Debug\netcoreapp3.1\InClub.Exceptions.deps.json
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\bin\Debug\netcoreapp3.1\InClub.Exceptions.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\bin\Debug\netcoreapp3.1\InClub.Exceptions.pdb
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\obj\Debug\netcoreapp3.1\InClub.Exceptions.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\obj\Debug\netcoreapp3.1\InClub.Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\obj\Debug\netcoreapp3.1\InClub.Exceptions.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\obj\Debug\netcoreapp3.1\InClub.Exceptions.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\obj\Debug\netcoreapp3.1\InClub.Exceptions.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\obj\Debug\netcoreapp3.1\InClub.Exceptions.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Exceptions\obj\Debug\netcoreapp3.1\InClub.Exceptions.pdb

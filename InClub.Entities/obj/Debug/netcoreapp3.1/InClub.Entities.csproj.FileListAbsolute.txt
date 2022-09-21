@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\bin\Debug\netcoreapp3.1\InClub.Entities.deps.json
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\bin\Debug\netcoreapp3.1\InClub.Entities.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\bin\Debug\netcoreapp3.1\InClub.Entities.pdb
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\obj\Debug\netcoreapp3.1\InClub.Entities.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\obj\Debug\netcoreapp3.1\InClub.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\obj\Debug\netcoreapp3.1\InClub.Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\obj\Debug\netcoreapp3.1\InClub.Entities.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\obj\Debug\netcoreapp3.1\InClub.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\obj\Debug\netcoreapp3.1\InClub.Entities.dll
+C:\Users\Usuario\source\repos\API_INCLUB\InClub.Entities\obj\Debug\netcoreapp3.1\InClub.Entities.pdb
